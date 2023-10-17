@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class bookRotation : MonoBehaviour
 {
-   
-    public float degreesPerSecond_rotate = 20;
-    // Start is called before the first frame update
+
+    public float rotateSpeed = 30f;
+    
+
     void Start()
     {
-        
+      
     }
 
-    // Update is called once per frame
-    
-    private void Update()
+    void Update()
+
     {
-        transform.Rotate(new Vector3(0, degreesPerSecond_rotate, 0) * Time.deltaTime);
+        transform.Rotate(Vector3.forward, rotateSpeed * Time.deltaTime);
 
     }
 }
