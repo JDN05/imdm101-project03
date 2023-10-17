@@ -27,7 +27,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Fill: 0.495
+    - _Fill: 0.232
     - _WobbleX: 0
     - _WobbleZ: 0
     m_Colors:

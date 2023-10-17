@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -619,7 +619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2381683827771927145, guid: d0834385148c44a2ab6c5f7fa178b30a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07
+      value: 0.671
       objectReference: {fileID: 0}
     - target: {fileID: 2381683827771927145, guid: d0834385148c44a2ab6c5f7fa178b30a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1198,6 +1198,7 @@ GameObject:
   - component: {fileID: 945771165}
   - component: {fileID: 945771164}
   - component: {fileID: 945771163}
+  - component: {fileID: 945771168}
   m_Layer: 0
   m_Name: Book
   m_TagString: Untagged
@@ -1217,7 +1218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ebd9e4b3d018d4baf57a04a0448a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degreesPerSecond_rotate: 0
+  rotateSpeed: 30
 --- !u!893571522 &945771164
 CustomCollider2D:
   m_ObjectHideFlags: 0
@@ -1313,13 +1314,27 @@ Transform:
   m_GameObject: {fileID: 945771162}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.18}
+  m_LocalPosition: {x: 0, y: 1.4, z: -5.18}
   m_LocalScale: {x: 0.16, y: 0.16, z: 0.16}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2052806011}
-  m_Father: {fileID: 1572447574}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &945771168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945771162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f1dcc86af0c38468be12c2309bb6be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {fileID: 1572447573}
+  orbitSpeed: -20
 --- !u!1001 &1066107185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1712,11 +1727,10 @@ Transform:
   m_GameObject: {fileID: 1572447573}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05, z: 0}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 945771167}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1572447575
@@ -1731,7 +1745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ebd9e4b3d018d4baf57a04a0448a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degreesPerSecond_rotate: 20
+  rotateSpeed: -30
 --- !u!1 &1620967373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,3 +2142,4 @@ SceneRoots:
   - {fileID: 1834239848}
   - {fileID: 226410842}
   - {fileID: 1620967378}
+  - {fileID: 945771167}
